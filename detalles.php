@@ -1,10 +1,8 @@
 <?php 
-		$idproducto = $_REQUEST['producto'];
-
+		$producto = $_REQUEST['producto'];
  ?>
 
 <!DOCTYPE html>
-
 <html>
 	
 	<head>
@@ -18,12 +16,9 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	   	<!-- Bootstrap CSS -->
     	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    	
-  		
 	</head>
   
   <body>
-
 
 <!--el include menu de navegacion cabecera-->
 		<?php include('header.php');
@@ -56,38 +51,30 @@
 		<?php
 				
 			//Realizamos la conexion
-
 			include ('conexion.proc.php');
 
 			//Sentencia para mostrar todos los materiales que dispone mi tienda de la tabla tbl_material
-
-			$sql = ("select * from tbl_material where id_material = $idproducto")or die(mysql_error());
+			$sql = ("select * from tbl_material where id_material = $producto")or die(mysql_error());
 
 			//mostramos la consulta para ver por pantalla si es lo que esperábamos o o 
 			//echo "$sql<br/>";
-
 			//lanzamos la sentencia sql
 
 			$datos = mysqli_query($con, $sql);
-
 			$contador = mysqli_num_rows($datos);	
-
 			echo "<div class='card text-center' id='tarjeta'>";
-			
 			while ($prod = mysqli_fetch_array($datos)){ 
-			
-
-		
+	
 		?>				
 	
 			<!--<div class="card text-center" id="tarjeta">-->
-			  		
 			  		<div class="card-header">
-			  			 <h1 class="card-title card text-white bg-dark mb-3"><strong><?php echo utf8_encode($prod['nombre']);?></strong></h>
+			  			 <h1 class="card-title card text-white bg-dark mb-3"><strong><?php echo utf8_encode($prod['nombre']);?></strong></h1>
 			 		</div>
+
 	 	 	<!--Cuerpo de la tarjeta slider de la izquierda">-->
 				 	<div class="card-body">
-				 		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="position: relative; margin: 0 auto; top: 40px; left: -480px; width: 260px; height: 220px;">
+				 		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="position: relative; margin: 0 auto; top: 60px; left: -520px; width: 250px; height: 440px;">
 				  
 							  <ol class="carousel-indicators">
 							    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -98,16 +85,16 @@
 							  </ol>
 								  <div class="carousel-inner">
 								    	<div class="carousel-item active">
-								   		   	<img src="./img/material/<?php echo $idproducto ?>/<?php echo $idproducto ?>.jpg" class="img-responsive" alt="">
+								   		   	<img src="./img/material/<?php echo $producto ?>/<?php echo $producto ?>.jpg" class="img-responsive" alt="">
 								    	</div>
 								   		<div class="carousel-item">
-								     	  	<img src="./img/material/<?php echo $idproducto ?>/<?php echo $idproducto ?>_2.jpg" class="img-responsive" alt="">
+								     	  	<img src="./img/material/<?php echo $producto ?>/<?php echo $producto ?>_2.jpg" class="img-responsive" alt="">
 								    	</div>
 									    <div class="carousel-item">
-									     	<img src="./img/material/<?php echo $idproducto ?>/<?php echo $idproducto ?>_3.jpg" class="img-responsive" alt="">
+									     	<img src="./img/material/<?php echo $producto ?>/<?php echo $producto ?>_3.jpg" class="img-responsive" alt="">
 									    </div>
 									     <div class="carousel-item">
-									     	<img src="./img/material/<?php echo $idproducto ?>/<?php echo $idproducto ?>_4.jpg" class="img-responsive" alt="">
+									     	<img src="./img/material/<?php echo $producto ?>/<?php echo $producto ?>_4.jpg" class="img-responsive" alt="">
 									    </div>
 								  </div>
 								  
@@ -122,50 +109,50 @@
 								  </a>
 							
 						</div>
-								 <!--imagenes del producto en el css estilo4.css imagenes-->
-								<img src="./img/material/<?php echo $idproducto ?>/<?php echo $idproducto ?>.jpg" class="imagenes">
-								<img src="./img/material/<?php echo $idproducto ?>/<?php echo $idproducto ?>_2.jpg" class="imagenes">
-								<img src="./img/material/<?php echo $idproducto ?>/<?php echo $idproducto ?>_3.jpg" class="imagenes">
-								<!--<img src="./img/material/<?php echo $idproducto ?>/<?php echo $idproducto ?>_4.jpg" class="imagenes">-->
+							 <!--imagenes del producto en el css estilo4.css imagenes-->
+								<img src="./img/material/<?php echo $producto ?>/<?php echo $producto ?>.jpg" class="imagenes">
+								<img src="./img/material/<?php echo $producto ?>/<?php echo $producto ?>_2.jpg" class="imagenes">
+								<img src="./img/material/<?php echo $producto ?>/<?php echo $producto ?>_3.jpg" class="imagenes">
+								<img src="./img/material/<?php echo $producto ?>/<?php echo $producto ?>_4.jpg" class="imagenes">
 								
-							    <!--descripcion del producto posicion en el css estilo4.css-->
+							<!--descripcion del producto posicion en el css estilo4.css-->
 							    <h6><p class="card text-white bg-primary mb-3" id="descripcion"> <?php echo utf8_encode($prod['descripcion']);?> </p></h6>
-							    <h6><p class="card text-white bg-secondary mb-3" id="descripcion2">With supporting text below as a natural lead-in to additional content.</p></h6>
-							    <a href="usuario.php" class="btn btn-danger" id="descripcion3">Compra éste producto</a>
-							     <a href="usuario.php" class="btn btn-warning" id="descripcion4">Vuelve Atrás</a>
-							    <!--Fin descripcion del producto-->
+							 	<h6><p class="card text-white bg-secondary mb-3" id="descripcion2"> <?php echo utf8_encode($prod['precio']);?>€</p></h6>
+							<!-- <a href="comprar.php" class="btn btn-danger" precio="12" titulo="Terminator" id="descripcion3">Compra éste producto</a>-->
+							    <a href="usuario.php" class="btn btn-warning" id="descripcion4">Vuelve Atrás</a>
+								<a href="carrito.php?producto=<?php echo $prod['id_material'] ?>" class="btn btn-primary" id="descripcion5">Carrito de la compra</a>
+							<!--Fin descripcion del producto-->
+
+						
+							
 			  		</div>
 
-
 			<!--Fin del cuerpo-->
+
 			<!--Pie-->
 					<div class="card-footer text-muted" id="pie">
 				    2 days ago
 				  	</div>
-			<!--Fin del Pie-->	  	
-				  
-
-			<?php }	 //fin while
-
-	  		 ?>
+			<!--Fin del Pie-->	 
+			 <?php } //fin while
+	 		 ?>
 
 			</div>
 
 			<!--Fin tarjeta-->
 
+			<!--Fin del cuerpo de la página-->
 
-<!--Fin del cuerpo de la página-->
-	
-
-<!--el include footer-->
-<footer>
+			<!--el include footer-->
+ <footer>
 	
 	<?php include('footer.php');
-		?>	
-</footer>
+	?>	
+</footer>	
 
-<!--fin footer-->
-	<!--Script carousel que me hara que vaya mas rápido y que me pare las imagenes
+		<!--fin footer-->
+		
+		<!--Script carousel que me hara que vaya mas rápido y que me pare las imagenes
 
 	<script>
 
@@ -184,7 +171,30 @@
     <script src="dist/js/bootstrap.min.js"></script>
     <!--Ventana modal-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--configuracion inicial carrito de compras-->
+    <!--<script src="minicart.js"></script>
+    <script>paypal.minicart.render({
+    		strings:{
+    					button:'Pagar'
+    					,buttonAlt: "Total"
+    					,subtotal: 'Total:'
+    					,empty: 'No hay productos en el carrito'
+    				}
+    								});
 
+    </script>
+  <!--Eventos para agregar productos al carrito-->
+
+ <!-- $('.producto').click(function(e){
+  	e.stopPropagation();	
+  	paypal.minicart.cart.add({
+  	business: 'fasion4@hotmail.com', <!--cuenta paypal-->
+  	 <!-- $('.producto').click(function(e){
+  	eitem_name: $(this).attr("titulo"),
+  	amount: $(this).attr("precio"),
+  	currency_code: 'EUR'
+  		  });
+  });-->
 
 </body>
 </html>

@@ -131,74 +131,25 @@
 
 /*Termina carrousel*/
 
-/*Donde esta el nombre del producto*/
-
-
-#tarjeta	{
-
-	margin-top: 370px;
-}
-
-#descripcion {
-
-	margin-top: -475px;
-	margin-left: 0px;
-}
-
-#descripcion2 {
-
-	margin-top: -16px;
-	margin-left: 0px;
-}
-
-/*Posición del boton*/
-
-#descripcion3	{
-
-	margin-top: 300px;
-	margin-left: 90px;
-}
-
-/*Posición del boton*/
+/*Posición del boton atras*/
 
 #descripcion4	{
 
-	margin-top: 320px;
+	margin-top: 420px;
 	margin-left: 40px;
 }
 
+/*Posición del carrito de compras*/
 
-/*Posición del carrito compras*/
-
-#descripcion5	{
-
-	margin-top: 320px;
-	margin-left: 40px;
-}
-
-
-#pie  {
-		margin-top: 80px;
-		margin-left: 0px;
-}
-
-/*Posición boton paypal*/
-/*#paypal {
-		margin-top: 50px;
-		margin-left: 300px;
-		width: 400px;
-		height: 50px;
-}*/
-
-/*Posición de las cuatro imágenes del producto*/
-
-.imagenes	{	width: 80px;
-				height: 80px;
-				margin-top: -410px;
-				margin-left: 220px;
+.imagenes	{	width: 150px;
+				height: 150px;
+				margin-top: 380px;
+				margin-left:520px;
 
 
 			}
+
+
 
 
 /*Posicion de la flecha de abajo*/
@@ -240,7 +191,7 @@
 	bottom: 0;
 	display: flex;
 	height: 100px;
-	margin-top: 0px;
+	margin-top: 500px;
 	width: 100%;
 }
 
