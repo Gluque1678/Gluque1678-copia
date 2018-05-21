@@ -1,0 +1,392 @@
+<!--Pagina de estilo del indice-->
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: #5f86b2;
+}
+
+	#barraLogin{
+
+		margin: 0 auto;
+		position: relative;
+		width: 999px;
+	}
+
+	#listaLogin{
+
+		float: right;
+		padding-top: 5px;
+		text-decoration: none;
+
+	}
+
+	#listaLogin li{
+
+		display: inline;
+		color: white;
+
+	}
+
+	#listaLogin li a{
+
+		color: white;
+		text-decoration: none;
+	}
+
+	#listaLogin li a:hover{
+
+		color: #002147;
+	}
+
+	/* HEADER ES LA PARTE SUPERIOR DONDE ESTA EL MENU DE NAVEGACIÓN */
+   
+	header{
+
+		text-align: center;
+		background-color: #002147;
+		width: 100%;
+		height: 150px;
+		position: relative;
+
+	}
+
+    #cabecera{
+
+    	position: relative;
+    	margin: 0 auto;
+    	width: 999px;
+    	height: 62px;
+    	background-color: #002147;
+
+    }
+
+    
+
+    figure{
+
+    	
+    	float: left;
+    	width: 25%;
+    	height: 62px;
+        margin-left: 0px;
+    	
+    }
+
+    figure img{
+
+    	position: absolute;
+    	width: 500px;
+        height: 130px;
+        margin-left: -460px;
+    	margin-top: 10px;
+    	
+    }
+
+
+    
+
+    
+    nav{
+
+    	position: relative;
+    	float: right;
+    	width: 85%;
+    	height: 72px;
+        margin-top: -100px;
+        margin-right: 170px;
+    	   
+    }
+
+ 	nav ul{
+
+ 		color: white;
+ 		text-align: right;
+ 		text-decoration: none;
+ 		padding-top: 30px;
+ 	    font-size: 20px;
+    	
+    	   
+    }
+
+    nav ul li{
+
+    	display: inline;
+ 		text-align: right;
+ 		padding-right: 9px;
+ 	    padding-left: 9px;
+    	
+    	   
+    }
+
+    nav ul li:hover{
+
+ 		color: #002147;
+ 		background-color: white;
+ 		padding-bottom: 5px;
+ 	    padding-top:  10px;
+    	
+    	   
+    } 
+
+   
+    .registrarse{
+
+        position: relative;
+        float: right;
+        margin-right: 20px;
+        margin-top: -90px;
+        
+
+    }
+
+
+    /* FIN HEADER */
+
+
+    /* MEDIO section  */
+
+    
+
+    section{
+
+    	margin:0 auto;
+    	width: 100%;
+    	height: 760px;
+        background-color: #BDFBFB;
+        padding-top: 20px;
+    }
+
+    /* CON ESTO PODEMOS INSERTAR UNA FOTO DONDE QUERAMOS 
+
+    #centroLogin{
+    	background-color: #5f86b2;
+    	background-image: url('../img/fondo.png'); 
+    	background-repeat: no-repeat;
+    	background-position: center center;
+    	width: 100%;
+    	height: 500px;
+    	margin: 0 auto;
+    }
+
+    /*
+
+    /* FORMULARIO */
+
+    #headerLogin{ 
+
+        margin-top: 20px;
+    	background-color: #5f86b2;
+	
+
+    }
+
+    #headerCentro{
+
+    	margin: 0 auto;
+    	width: 385px;
+    }
+    
+    #headerLogin h2{ 
+
+    	padding-top: 50px;
+    	color: white;
+    	float: left;
+        font-size: 65px;
+
+
+
+    }
+
+    /* CUADRO FORMULARIO */
+    
+    
+    #contenido{
+
+        padding-top: 45px;
+
+    } 
+
+    #formCentro{
+
+        background-color: #5f86b2;
+    	width: 485px;
+    	height: 350px;
+    	margin: 0 auto;
+    	border: 6px solid #431FE4;
+    	border-radius: 6px;
+        padding-top: 1px;
+        margin-top: 70px;
+
+    }
+
+    #formLogin{
+
+    	padding: 5px;
+    }
+
+    /* CONFIGURACION DE LOS BOTONES */
+
+    #form input#user:focus, form input#pass:focus {
+
+    	box-shadow: 0px 0px 5px #80D8FF;
+    	-webkit-box.box-shadow: 0px 0px 5px #80D8FF;
+    	-moz-box-shadow: 0px 0px 5px #80D8FF;
+    }
+
+    form p{
+
+    	color: white;
+    	font-size: 20px;
+    	margin-bottom: 10px;
+    }
+
+    /* CONFIGURACIÓN DE LOS BOTONES */
+    
+    /*Usuario y contraseña */
+    .user, .pass{
+
+    	border: 2px solid white;
+    	padding: 5px;
+    	font-size: 26px;
+    	margin-bottom: 10px;
+        width: 460px;
+    }
+
+     /* cuando se pasa el raton se pone azul blojito y las letras de color negro*/
+
+    .user:hover, .pass:hover{
+
+    	background-color: #80D8FF;
+    	color:black;
+    	cursor: pointer;
+    }
+
+    /*Entrar y borrar */
+
+    .submit, .reset{
+
+    	margin-top: 20px;
+        margin-left: 50px;
+    	padding: 5px;
+    	color: white;
+    	background-color: #002147;
+    	font-size: 30px;
+    	border: 0;
+
+    }
+
+
+    /* cuando se pasa el raton se pone rojo y las letras de color blanco*/
+    .submit:hover, .reset:hover{
+
+    	background-color: red;
+    	color:white;
+    	cursor: pointer;
+    }
+	
+    #error{
+
+    	margin: 0auto;
+    	width: 500px;
+    	height: auto;
+
+
+    }
+
+    #error p{
+
+    	padding-top: 100px;
+    	width: 1000px;
+    	height: 40px;
+    	text-align: center; 
+        font-size: 50px;
+        text-transform: uppercase;
+
+    	
+
+    }
+
+    /* mensaje del php cuando el usuario y contraseña inconrrectos */
+
+    .mensaje{
+
+        
+        border-collapse: collapse;
+        border: 5px solid red;
+        border-radius: 6px;
+        
+
+    }
+
+    /* Animacion en intermitente del usuario y contraseña incorrecto */
+
+    .mensaje:hover{
+
+        cursor: pointer;
+        background-color: #FE9A2E;
+        color:black;
+        animation-name: mensaje;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        -webkit-animation-name:mensaje;
+        -webkit-animation-duration: 1s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+
+        
+    }
+
+    @-moz-keyframes mensaje {
+
+        0% {opacity: 1.0; }
+        50% {opacity: 0.0; }
+        100% {opacity: 1.0; }
+    }
+
+    @-webkit-keyframes mensaje {
+
+        0% {opacity: 1.0; }
+        50% {opacity: 0.0; }
+        100% {opacity: 1.0; }
+
+    }
+
+    @keyframes mensaje {
+
+        0% {opacity: 1.0; }
+        50% {opacity: 0.0; }
+        100% {opacity: 1.0; }
+
+     }
+
+
+   /* FIN DEL FORMULARIO */
+
+   
+   /* Footer es la parte inferior pie de página*/
+
+    
+
+    .footer {
+
+    background: #5080ef none repeat scroll 0 0;
+    border-radius: 5px;
+    bottom: 0;
+    display: flex;
+    height: 100px;
+    margin-top: -50px;
+    width: 100%;
+}
+
+    .footimg    {
+
+    margin-left: 39%;
+    margin-top: 19px;
+    text-align: center;
+}
+
