@@ -120,7 +120,13 @@
 							 	<h6><p class="card text-white bg-secondary mb-3" id="descripcion2"> <?php echo utf8_encode($prod['precio']);?>€</p></h6>
 							<!-- <a href="comprar.php" class="btn btn-danger" precio="12" titulo="Terminator" id="descripcion3">Compra éste producto</a>-->
 							    <a href="usuario.php" class="btn btn-warning" id="descripcion4">Vuelve Atrás</a>
-								<a href="carrito.php?producto=<?php echo $prod['id_material'] ?>" class="btn btn-primary" id="descripcion5">Carrito de la compra</a>
+
+								<!-- <a href="carrito.php?producto=<?php echo $prod['id_material'] ?>" class="btn btn-primary" id="descripcion5">Añadir al carrito</a> -->
+
+								<input type="number" id="cantidad" value="1" min="1">
+                      		<?php	
+                      			echo "<button class='btn btn-primary' id='descripcion5' onClick='addProduct(".$prod['id_material'].");'>Agregar al carrito</button>";
+                      		?>
 							<!--Fin descripcion del producto-->
 
 						
@@ -171,6 +177,16 @@
     <script src="dist/js/bootstrap.min.js"></script>
     <!--Ventana modal-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<script>
+		function addProduct(code){
+			//alert(code);
+			var cantidad = document.getElementById('cantidad').value;
+			//alert(cantidad);
+			window.location.href = 'carrito.php?action=add&id='+code+'&cantidad='+cantidad;
+		}
+	</script>
+
     <!--configuracion inicial carrito de compras-->
     <!--<script src="minicart.js"></script>
     <script>paypal.minicart.render({

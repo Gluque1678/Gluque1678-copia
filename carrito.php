@@ -1,36 +1,16 @@
 <?php
-	//iniciamos sesión - SIEMPRE TIENE QUE ESTAR EN LA PRIMERA LÍNEA
-	session_start();
-	include("conexion.proc.php");
-
-	//$producto = $_GET['producto'];
-
-	if(isset($_SESSION['carrito'])){
-
-	} else{
-		if(isset($producto)){
-			$_nombre="";
-			$_precio=0;
-			$_imagen="";
-			$_re=mysqli_query($con, "select * from tbl_material where id_material=$producto")or die(mysql_error());
-			while ($f=mysqli_fetch_array($_re)) {
-					$_nombre=$f['nombre'];
-					$_precio=$f['precio'];
-					$_imagen=$f['imagen'];
-			}
-			
-
-			//Creo el arreglo y la cantidad 1 porque es la primera vez que accede al arreglo
-			$arreglo=array(
-				'id' => $producto,
-			   	'Nombre' => $_nombre,
-			   	'Precio' => $_precio,
-			   	'Imagen' => $_imagen,
-			   	'Cantidad' => 1
-			);
-
-			//Aqui guardo la variable de session 
-			$_SESSION['carrito']=$arreglo;
+	include_once('clases/claseProducto.php');
+	include_once('clases/claseCarrito.php');
+	$product = new Product();
+	$cart = new Cart();
+	if(isset($_GET['action'])){
+		switch ($_GET['action']){
+			case 'add':
+				$cart->add_item($_GET['id'], $_GET['cantidad']);
+			break;
+			case 'remove':
+				$cart->remove_item($_GET['id']);
+			break;
 		}
 	}
 
@@ -86,55 +66,21 @@
 	<header>
 
 		<h1></h1>
-		<a href="./carrito.php" title="carrito de compras"><img src="./img/compra/carrito.jpg" class="imagenes">
-		<a href="detalles.php" class="btn btn-warning" id="descripcion4">Vuelve Atrás</a>
-		
+		<a href="./carrito.php" title="carrito de compras"><img src="./img/compra/carrito.jpg" class="imagenes"></a>
+		<!-- <a href="detalles.php" class="btn btn-warning" id="descripcion4">Vuelve Atrás</a> -->
 	</header>
 
 	
 	<section>
-		
-		<?php
-				$total=0;
-				if(isset($_SESSION['carrito'])){
-					//Creo variable datos y total que se iniciara en 0
-					$datos=$_SESSION['carrito'];
-					$total=0;
-					for($i=0;$i<count($datos);$i++){
-					$totalArray = count($datos);
-					echo "El número es: ".$totalArray;
+		<div class="producto">
+			<center>
+				<?=$cart->get_items();?><br/><br/>
+				Cantidad de productos: <?=$cart->get_total_items();?><br/>
+				Total a pagar: <?=$cart->get_total_payment();?>€<br/>
 
-		?>
-
-				<div class="producto">
-				<center>
-					<?php echo '<img src="img/material/_ant/'.$datos['Imagen'].'" /><br/>';?>
-					<span><?php echo $datos['Nombre']; ?></span><br>
-					<span>Precio<?php echo $datos['Precio'];?></span><br>
-					<span>Cantidad:<input type="text" value="<?php echo $datos['Cantidad'];?>"></span><br>
-					<span>Precio <?php echo $datos['Precio']*$datos['Cantidad'];?></span><br>
-				
-					<span class="subtotal">Subtotal:<?php echo $datos['Cantidad']*$datos['Precio'];?></span><br>
-				</center>
-
-			</div>
-
-		<?php
-			//Calculo variable total
-					$total=($datos['Cantidad']*$datos['Precio'])+$total;
-					
-				}
-
-				}else{
-
-				echo '<center><h2>El carrito de compras esta vacio</h2></center>';
-
-					}
-			// Esto me dira que el total es 0
-				echo '<center><h2>Total: '.$total.'</h2></center>';
-
-		?>
-		<center><a href="usuario.php">Ver catalogo</a></center>
+				<a href="usuario.php">Volver al catálogo</a>
+			</center>
+		</div>
 	</section>
 
 	<footer>
@@ -151,6 +97,13 @@
     <script src="dist/js/bootstrap.min.js"></script>
     <!--Ventana modal-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+    	function deleteProduct(code){
+    		//alert(code);
+			window.location.href = 'carrito.php?action=remove&id='+code;
+		}
+    </script>
 
 
 
