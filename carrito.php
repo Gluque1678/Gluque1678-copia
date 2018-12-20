@@ -38,7 +38,7 @@
   <body>
 	
 	<!--el include menu de navegacion cabecera-->
-		<?php include('header.php');
+		<?php include('header2.php');
 		?>	
 <!--fin menu cabecera-->
 
@@ -65,14 +65,16 @@
 
 	<header>
 
-		<h1></h1>
+		<!--<h1></h1>
 		<a href="./carrito.php" title="carrito de compras"><img src="./img/compra/carrito.jpg" class="imagenes"></a>
-		<!-- <a href="detalles.php" class="btn btn-warning" id="descripcion4">Vuelve Atrás</a> -->
+		 <a href="detalles.php" class="btn btn-warning" id="descripcion4">Vuelve Atrás</a> -->
 	</header>
+
+</br></br></br></br></br></br></br></br></br></br></br></br></br></br>
 
 	
 	<section>
-		<div class="producto">
+		<!--<div class="producto">
 			<center>
 				<?=$cart->get_items();?><br/><br/>
 				Cantidad de productos: <?=$cart->get_total_items();?><br/>
@@ -80,7 +82,50 @@
 
 				<a href="usuario.php">Volver al catálogo</a>
 			</center>
-		</div>
+		</div>-->
+
+		<div class="row">
+		  
+		  <div class="col-sm-6">
+		    <div class="card border-dark mb-3">
+		      <div class="card-body">
+		      	
+		      	<center> 	
+			        <h4 class="card-title"><?=$cart->get_items();?></h4>
+			        <p class="card text-white bg-success mb-3 style="max-width: 18rem;">
+			        Cantidad de productos: <?=$cart->get_total_items();?></p>
+			        <p class="card text-white bg-danger mb-3 style="max-width: 18rem; ">
+			        Total a pagar: <?=$cart->get_total_payment();?>€</p>
+			     	<h4 class="card-title1"><a href="usuario.php#" class="btn btn-primary">Volver al catálogo</a></h4>
+			     	<!--<h4 class="card-title2"><a href="usuario.php#" class="btn btn-primary">Pagar</a></h4>-->
+			     	<!-- Botones PayPal -->
+						<form action="https://www.paypal.com/es/cgi-bin/webscr" method="post">
+							<input type="hidden" name="cmd" value="_xclick">
+							<!-- Email que recibirá el pago -->
+							<input type="hidden" name="business" value="fasion4@hotmail.com">
+							<!-- Nombre del producto  -->
+							<input type="hidden" name="item_name" value="Compra en Electronica Online">
+							<!-- Tipo de moneda -->
+							<input type="hidden" name="currency_code" value="EUR">
+							<!-- Precio del producto -->
+							<input type="hidden" name="amount" value="<?=$cart->get_total_payment();?>">
+							<!-- Redirección al pagar -->
+							<input type="hidden" name="return" value="http://localhost/Gluque1678/carrito.php">
+							<!-- Redirección al cancelar -->
+							<input type="hidden" name="cancel_return" value="http://localhost/Gluque1678/carrito.php">
+							<!-- Imagen de botón -->
+							<input type="image" src="https://www.paypalobjects.com/es_ES/ES/i/btn/btn_buynowCC_LG.gif" name="submit" alt="PayPal. La forma rápida y segura de pagar en Internet.">
+						</form>
+
+					<!--Fin botones PayPal-->
+		        <center>
+		      </div>
+		    </div>
+		  </div>
+		  
+						
+
+		</div>	
 	</section>
 
 	<footer>

@@ -111,15 +111,15 @@
 
 		        <thead>
 		        	<tr>
-		         	 <th style=width:1% text align="left"><h3>Alta Usuarios</h3> </th>
-		         	 <th style=width:1% text align="left"><h3>Email</h3> </th>
-		         	 <th style=width:1% text align="left"><h3>Contraseña </h3> </th>
-		         	 <th style=width:1% text align="left"><h3>Teléfono Fijo</h3> </th>
-		         	 <th style=width:1% text align="left"><h3>Teléfono Movil</h3> </th>
-		         	 <th style=width:1% text align="left"><h3>Dni</h3> </th>
+		         	 <th style=width:10% text align="left"><h3>Alta Usuarios</h3> </th>
+		         	 <th style=width:4% text align="left"><h3>Email</h3> </th>
+		         	 <th style=width:4% text align="left"><h3>Contraseña </h3> </th>
+		         	 <th style=width:4% text align="left"><h3>Teléfono Fijo</h3> </th>
+		         	 <th style=width:4% text align="left"><h3>Teléfono Movil</h3> </th>
+		         	 <th style=width:4% text align="left"><h3>Dni</h3> </th>
 		         	 <th style=width:1%  text align="left"><h3>Rol</h3> </th>
 		        	 <th style=width:1%  text align="left"><h3>Activos</h3> </th>
-		         	 <th style=width:2% text align="center"><h3>Modificaciones</h3> </th>
+		         	 <th style=width:8% text align="center"><h3>Modificaciones</h3> </th>
 		               
 		        	</tr>
 		        </thead>

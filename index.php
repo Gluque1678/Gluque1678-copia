@@ -46,8 +46,8 @@
     <nav> 
        <ul>
          <li>INICIO</li>
-         <li>HISTORIA</li>
-         <li>CONTACTO</li>
+         <li><a href="historia.php">HISTORIA</a></li>
+         <li><a href="contactosindex.php">CONTACTAR</a></li>
         </ul>
     </nav>
 
@@ -94,10 +94,6 @@
 
 							}
 						?>-->
-
-
-
-
 
 
      <section>

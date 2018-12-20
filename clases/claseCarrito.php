@@ -50,7 +50,7 @@
 									<span>'.$key['product'].'</span><br/>
 									<span>Precio: '.number_format($key['price'], 2).'€</span><br/>
 									<span>Cantidad: '.$key['cantidad'].'</span><br/>
-									<span>Subtotal: '.number_format($key['subtotal'], 2).'€</span><br/>
+									<span>Subtotal: '.number_format($key['subtotal'], 2).'€</span><br/><br/>
 									<button class="btn btn-danger" onClick="deleteProduct('.$key['code'].');">
 			                    		Eliminar
 			                    	</button><br/>';

@@ -149,8 +149,38 @@
 
 			}
 
+.col-sm-6{		width: 550px;
+				margin-top: 20px;
+				margin-left:320px;
+				
 
+			}
 
+.card-body	{	
+				margin-top: 20px;
+			
+			}
+
+.card-title1	{	
+				margin-top: 10px;
+				margin-right:0px;
+				
+
+			}
+
+#card-title2	{	
+					margin-top: -10px;
+					margin-left:10px;
+				
+
+			}
+
+#cantidad	{	
+					margin-top: 55px;
+					margin-left:140px;
+				
+
+			}
 
 /*Posicion de la flecha de abajo*/
 

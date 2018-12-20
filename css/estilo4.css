@@ -164,8 +164,17 @@
 #descripcion4	{
 
 	margin-top: 320px;
-	margin-left: 40px;
+	margin-left: 80px;
 }
+
+/*Posición del boton de cantidad*/
+
+#cantidad	{	
+					margin-top: 320px;
+					margin-left:40px;
+				
+
+			}
 
 
 /*Posición del carrito compras*/
@@ -199,6 +208,7 @@
 
 
 			}
+
 
 
 /*Posicion de la flecha de abajo*/

@@ -21,7 +21,7 @@
   <body>
 
 <!--el include menu de navegacion cabecera-->
-		<?php include('header.php');
+		<?php include('header2.php');
 		?>	
 <!--fin menu cabecera-->
 
@@ -122,8 +122,9 @@
 							    <a href="usuario.php" class="btn btn-warning" id="descripcion4">Vuelve Atrás</a>
 
 								<!-- <a href="carrito.php?producto=<?php echo $prod['id_material'] ?>" class="btn btn-primary" id="descripcion5">Añadir al carrito</a> -->
-
-								<input type="number" id="cantidad" value="1" min="1">
+							
+							<!--	<input type="number" id="cantidad" value="1" min="1">-->
+								<input type="number" class="btn btn-dark" id="cantidad" value="1" min="1"">
                       		<?php	
                       			echo "<button class='btn btn-primary' id='descripcion5' onClick='addProduct(".$prod['id_material'].");'>Agregar al carrito</button>";
                       		?>
