@@ -8,7 +8,7 @@
 					<a href="https://twitter.com"><img src="./img/redessociales/twitter.png" width="64" height="64"></a>
 					<a href="https://pinterest.com"><img src="./img/redessociales/pinterest.png" width="64" height="64"></a>
 					<a href="https://plus.google.com/?hl=es"><img src="./img/redessociales/google-plus.png" width="64" height="64"></a>
-					<a href="https://info.com"><img src="./img/redessociales/info.png" width="64" height="64"></a>
+					<a href="https://directorio-info.com.es"><img src="./img/redessociales/info.png" width="64" height="64"></a>
 				</div>
 			</div>
 

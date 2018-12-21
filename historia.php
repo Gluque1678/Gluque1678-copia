@@ -52,17 +52,14 @@
 
 				</br>
 
-								  
-		
-			</article>
-
+		 </article>
 		</section>
 
 		</br>
 
 		<section>	
 
-			<article>
+			<article id="azul">
 
 
 				<?php include('quienesfooter.php');

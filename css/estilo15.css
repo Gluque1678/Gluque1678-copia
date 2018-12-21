@@ -9,13 +9,16 @@ body{
 	background-color:#F2F2F2;
 }
 
-/* aqui esta el pie de mi página de usuarios*/
 
-#card-body	{ 
+/* aqui esta el articulo de color verde el primero*/
 
-	
+section{
+
+		height: 330px;
+		width: 100%;
+		margin-top: -25px;
+
 }
-
 
 .footer	{
 
@@ -24,7 +27,7 @@ body{
 	bottom: 0;
 	display: flex;
 	height: 100px;
-	margin-top: -16px;
+	margin-top: 245px;
 	width: 100%;
 }
 
